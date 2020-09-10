@@ -1,10 +1,10 @@
-class User:
+"""class User:
     def __init__(self,lname,fname):
         self.firstname=fname
         self.lastname=lname
     def showdata(self):
         print("My firstname is" + " " + self.firstname)
-        print("My lastname is" + " " + self.lastname)
+        print("My lastname is" + " " + self.lastname)"""
 """User1=User("Jhon","David")
 User1.showdata()#Parent Class"""
 
@@ -42,11 +42,27 @@ x=Student("Napaleon","Brayan",2019)
 x.showdata()
 print(x.GraditionYear)"""
 
-class Student(User):
+"""class Student(User):
     def __init__(self,fname,lname,year):
         super().__init__(fname,lname)
         self.GraditionYear=year
     def Welcome(self):
         print("Welcome",self.firstname,self.lastname,"To the class of",self.GraditionYear)
 x=Student("Napaleon","Hill",2019)
-print(x.Welcome())#Child class-a Welcome methodunu elave etmek
+print(x.Welcome())#Child class-a Welcome methodunu elave etmek"""
+
+#Example number 1:
+class User:
+    def __init__(self,firstname,surname):
+        self.fname=firstname
+        self.surname=surname
+    def showData(self):
+        print("My name is:",self.fname, "and my surname is:",self.surname,"and my gradition year is:",self.graditionyear)
+class Student(User):
+    def __init__(self,firstname,surname,year):
+        super().__init__(firstname,surname)
+        self.graditionyear=year
+    def Welcome(self,):
+        print("Welcome",self.fname,self.surname,"what is your gradition year?","My gradition year is:",self.graditionyear,end=" ")
+x=Student("Cavid","Hesenov",2019)
+print(x.Welcome())
